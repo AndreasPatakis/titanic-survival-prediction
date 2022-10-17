@@ -1,0 +1,76 @@
+# Package overview
+package_name: classification_model
+
+#Data Files
+raw_data_file: raw.csv
+training_data_file: train.csv
+testing_data_file: test.csv
+
+#Data Variables
+replace_existing_datasets: False
+dataset_source: 'https://www.openml.org/data/get_csv/16826755/phpMYEkMl'
+
+#Pipeline model
+pipeline_name: classification_model
+pipeline_save: classification_model_output_v_
+
+#Model Variables
+numerical_variables: 
+  - pclass
+  - age
+  - sibsp
+  - parch
+  - fare
+  
+categorical_variables: 
+  - sex
+  - cabin
+  - embarked
+  - title
+  
+cabin: 
+  - cabin
+
+target: survived
+
+features:
+  - pclass
+  - sex
+  - age
+  - sibsp
+  - parch
+  - fare
+  - cabin
+  - embarked
+  - title
+
+test_size: 0.2
+
+random_state: 0
+
+#Categorical varibales occurrence statistics
+cat_stats:
+  - sex: 
+      male: 0.633238 
+      female: 0.366762
+  - cabin: 
+      Missing: 0.766953
+      C: 0.074499
+      B: 0.049666
+      D: 0.034384
+      E: 0.034384
+      A: 0.018147
+      F: 0.017192
+      G: 0.003820
+      T: 0.000955
+  - embarked: 
+      S: 0.709647
+      C: 0.195798
+      Q: 0.092646
+      Missing: 0.001910
+  - title:
+      Mr: 0.5692454632282713
+      Miss: 0.20057306590257878
+      Mrs: 0.15950334288443171
+      Master: 0.044890162368672396
+      Other: 0.025787965616045846
