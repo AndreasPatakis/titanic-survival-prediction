@@ -17,7 +17,7 @@ from feature_engine.imputation import (
 from feature_engine.encoding import RareLabelEncoder
 
 # import preprocessing features
-from preprocessing import features
+from classification_model.preprocessing import features
 
 # import configuration
 from classification_model.config.core import config

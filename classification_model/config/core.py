@@ -45,7 +45,7 @@ class ModelConfig(BaseModel):
     features: List[str]
     test_size: float
     random_state: int
-    cat_stats: List[dict]
+    cat_stats: dict
 
 
 class Config(BaseModel):

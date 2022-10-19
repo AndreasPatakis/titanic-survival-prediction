@@ -50,10 +50,10 @@ random_state: 0
 
 #Categorical varibales occurrence statistics
 cat_stats:
-  - sex: 
+    sex: 
       male: 0.633238 
       female: 0.366762
-  - cabin: 
+    cabin: 
       Missing: 0.766953
       C: 0.074499
       B: 0.049666
@@ -63,12 +63,12 @@ cat_stats:
       F: 0.017192
       G: 0.003820
       T: 0.000955
-  - embarked: 
+    embarked: 
       S: 0.709647
       C: 0.195798
       Q: 0.092646
       Missing: 0.001910
-  - title:
+    title:
       Mr: 0.5692454632282713
       Miss: 0.20057306590257878
       Mrs: 0.15950334288443171

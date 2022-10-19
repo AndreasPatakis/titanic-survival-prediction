@@ -8,6 +8,8 @@ import joblib
 
 from classification_model.config.core import config, DATASET_PATH, PACKAGE_ROOT, TRAINED_MODEL_DIR
 from classification_model import __version__ as _version
+from classification_model.preprocessing.features import configuring_data
+
 
 def split_dataset(df: pd.DataFrame, test_set_perc: float = 0.1) -> pd.DataFrame:
     """ Splitting dataset to train and test sets"""
@@ -101,3 +103,10 @@ def load_pipeline(*, file_name: str) -> Pipeline:
     return _pipeline
 
 
+def load_raw_dataset(*, path: Path) -> pd.DataFrame:
+    """ Loads an new stream of data, and applies necessary processes"""
+
+    df = load_dataset(path=path)
+    df = configuring_data(data=df)
+
+    return df
